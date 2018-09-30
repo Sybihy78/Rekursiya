@@ -1,4 +1,4 @@
-# include <iostream>
+# include <iostream> // Следите за пробелами. Здесь после решетки есть лишний.
 #include <clocale>
 
 
@@ -6,6 +6,8 @@ int print(int start, int n);
 
 void exponent_two(int n);
 
+// Функция принимает слишком много аргументов. Здесь столько не надо.
+// Достаточно было бы одного (номер числа Фибоначчи, которое нужно вычислить)
 int fibo(int n1, int n2, int n, int x);
 
 int sum_digits(int sum, int n);
@@ -96,6 +98,8 @@ void exponent_two(int n) {
 }
 
 
+// Можно реализовать чуть-чуть проще. Додумайте про набор аргументов. 
+// Всю реализацию можно уместить примерно на 5-6 строчках. 
 int fibo(int n1, int n2, int n, int x) {
 
 	int sum = n1 + n2;
@@ -135,6 +139,7 @@ int get_max(int n, int max) {
 		max = n;
 	}
 
+	// Этот вывод следовало бы убрать из функции. Он нужен там, где Вы вызываете Вашу функцию.
 	std::cout << "Max of your numbers is" << "\t" << max << std::endl;
 	
 	if (n == 0) {
